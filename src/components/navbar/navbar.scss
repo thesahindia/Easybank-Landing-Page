@@ -1,0 +1,102 @@
+.navbar {
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 9;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 70rem;
+    margin: 0 auto;
+    
+    @media (max-width: 1200px) {
+        width: 60rem;
+    }
+    @media (max-width: 1000px) {
+      width: 45rem;
+  }
+    .logo {
+      padding-top: 5px;
+    }
+    .icon {
+      width: 30px;
+      display: none;
+      cursor: pointer;
+    }
+    .nav-link {
+      padding: 0 12px;
+      text-decoration: none;
+      color: rgb(152, 154, 170);
+      font-size: 14px;
+      position: relative;
+      &:hover {
+        color: #000;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-image: linear-gradient(
+          to right,
+          hsl(136, 65%, 51%),
+          hsl(192, 70%, 51%)
+        );
+        height: 3px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    .wrapper {
+      width: 90vw;
+      justify-content: space-between;
+      box-sizing: border-box;
+      height: 70px;
+
+      .nav-list {
+        position: absolute;
+        top: 100px;
+        right: 50%;
+        transform: translateX(50%);
+        height: 0;
+        width: 90%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        transition: all 0.3s ease-out;
+        background-color: #fff;
+        .nav-link {
+          font-size: 15px;
+          color: #000;
+        }
+        &.active {
+          height: 300px;
+        }
+      }
+    }
+    .button {
+      display: none;
+    }
+    .icon {
+      display: block !important;
+    }
+  }
+}
