@@ -1,0 +1,25 @@
+.feature-card {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  
+  .feature-icon img {
+    transform: rotate(0deg);
+    transition: transform 0.9s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: rotate(360deg);
+    }
+  }
+  .feature-text {
+    .title {
+      font-size: 24px;
+      color: #2d314d;
+      font-weight: 300;
+    }
+    .description {
+      color: #989aaa;
+    }
+  }
+}
