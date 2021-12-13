@@ -43,12 +43,10 @@ export default function ArticleSection() {
 
   return (
     <div className="article-section">
-        <div className="article-section-wrapper">
-      <h2 className="heading">Latest Articles</h2>
-      <div className="article-cards">
-        {articleCards}
+      <div className="article-section-wrapper">
+        <h2 className="heading">Latest Articles</h2>
+        <div className="article-cards">{articleCards}</div>
       </div>
-    </div>
     </div>
   );
 }

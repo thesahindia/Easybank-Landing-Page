@@ -12,13 +12,13 @@
     height: 80px;
     width: 70rem;
     margin: 0 auto;
-    
+
     @media (max-width: 1200px) {
-        width: 60rem;
+      width: 60rem;
     }
     @media (max-width: 1000px) {
       width: 45rem;
-  }
+    }
     .logo {
       padding-top: 5px;
     }

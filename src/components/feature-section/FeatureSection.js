@@ -33,24 +33,22 @@ export default function FeatureSection() {
     },
   ];
   const renderFeatures = () => {
-    return features.map((feature) => { 
-        return <FeatureCard key={feature.title} {...feature} />;
+    return features.map((feature) => {
+      return <FeatureCard key={feature.title} {...feature} />;
     });
-    };
+  };
 
   return (
     <div className="feature-section">
-        <div className="feature-section-wrapper">
-      <div className="feature-heading">
-        <h2 className="title">Why Choose Easybank?</h2>
-        <p className="description">
-          We leverage Open Banking to turn your bank account into your financial
-          hub. Control your finances like never before.
-        </p>
-      </div>
-      <div className="feature-list">
-      {renderFeatures()}
-      </div>
+      <div className="feature-section-wrapper">
+        <div className="feature-heading">
+          <h2 className="title">Why Choose Easybank?</h2>
+          <p className="description">
+            We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
+        </div>
+        <div className="feature-list">{renderFeatures()}</div>
       </div>
     </div>
   );
